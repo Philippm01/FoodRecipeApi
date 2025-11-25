@@ -1,13 +1,17 @@
+using FoodRecipeApi.Data;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+// Add DbContext
+builder.Services.AddDbContext<FoodRecipeContext>(options =>
+    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -16,29 +20,38 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-var summaries = new[]
+// Get all whole foods
+app.MapGet("/api/wholefoods", async (FoodRecipeContext db) =>
 {
-    "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-};
-
-app.MapGet("/weatherforecast", () =>
-{
-    var forecast =  Enumerable.Range(1, 5).Select(index =>
-        new WeatherForecast
-        (
-            DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-            Random.Shared.Next(-20, 55),
-            summaries[Random.Shared.Next(summaries.Length)]
-        ))
-        .ToArray();
-    return forecast;
+    return await db.WholefoodEn.ToListAsync();
 })
-.WithName("GetWeatherForecast")
+.WithName("GetWholefoods")
+.WithOpenApi();
+
+// Get whole food by id
+app.MapGet("/api/wholefoods/{id}", async (long id, FoodRecipeContext db) =>
+{
+    var food = await db.WholefoodEn.FindAsync(id);
+    return food is null ? Results.NotFound() : Results.Ok(food);
+})
+.WithName("GetWholefoodById")
+.WithOpenApi();
+
+// Get all recipes
+app.MapGet("/api/recipes", async (FoodRecipeContext db) =>
+{
+    return await db.RecipesEn.ToListAsync();
+})
+.WithName("GetRecipes")
+.WithOpenApi();
+
+// Get recipe by id
+app.MapGet("/api/recipes/{id}", async (long id, FoodRecipeContext db) =>
+{
+    var recipe = await db.RecipesEn.FindAsync(id);
+    return recipe is null ? Results.NotFound() : Results.Ok(recipe);
+})
+.WithName("GetRecipeById")
 .WithOpenApi();
 
 app.Run();
-
-record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
-{
-    public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
-}
