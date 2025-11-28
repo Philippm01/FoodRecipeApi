@@ -3,7 +3,7 @@ namespace FoodRecipeApi.DTOs;
 public class RecipesEnDto
 {
     public long Id { get; set; }
-    public string Name { get; set; }
+    public string? Name { get; set; }
     public int? Calories { get; set; }
     public double? Carbohydrates { get; set; }
     public double? Fats { get; set; }
@@ -17,12 +17,12 @@ public class RecipesEnDto
     public string? Country { get; set; }
     public int? Icon { get; set; }
     public string? Description { get; set; }
-    public string Steps { get; set; }
-    public string Ingredients { get; set; }
+    public string? Steps { get; set; }
+    public string? Ingredients { get; set; }
     public int? PortionSize { get; set; }
     public int PreparationTime { get; set; }
     public int? Difficulty { get; set; }
-    public string ImagePath { get; set; }
+    public string? ImagePath { get; set; }
     public bool Vegan { get; set; }
     public bool Vegetarian { get; set; }
     public bool Pescetarian { get; set; }

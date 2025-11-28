@@ -1,5 +1,6 @@
 using FoodRecipeApi.DTOs;
 using Microsoft.EntityFrameworkCore;
+using FoodRecipeApi.Models;
 
 namespace FoodRecipeApi.Data;
 
@@ -11,6 +12,8 @@ public class FoodRecipeContext : DbContext
 
     public DbSet<WholefoodEnDto> WholefoodEn { get; set; }
     public DbSet<RecipesEnDto> RecipesEn { get; set; }
+    public DbSet<Recipe> Recipes { get; set; }
+    public DbSet<Wholefood> Wholefoods { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -19,6 +22,8 @@ public class FoodRecipeContext : DbContext
         // Map to existing tables
         modelBuilder.Entity<WholefoodEnDto>().ToTable("wholefood_en");
         modelBuilder.Entity<RecipesEnDto>().ToTable("recipes_en");
+
+        // Remove new table creation and relationship setup for Recipe/Ingredient
 
         // Configure primary keys
         modelBuilder.Entity<WholefoodEnDto>().HasKey(w => w.Id);
