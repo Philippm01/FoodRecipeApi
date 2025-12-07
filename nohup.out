@@ -41,3 +41,2907 @@ info: Microsoft.Hosting.Lifetime[0]
       Hosting environment: Development
 info: Microsoft.Hosting.Lifetime[0]
       Content root path: /root/FoodRecipeApi
+warn: Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware[3]
+      Failed to determine the https port for redirect.
+fail: Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware[1]
+      An unhandled exception has occurred while executing the request.
+      System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+       ---> System.IO.FileNotFoundException: Could not load file or assembly 'System.IdentityModel.Tokens.Jwt, Version=7.1.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35'. The system cannot find the file specified.
+      
+      File name: 'System.IdentityModel.Tokens.Jwt, Version=7.1.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35'
+         at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerOptions..ctor()
+         at System.RuntimeType.CreateInstanceOfT()
+         --- End of inner exception stack trace ---
+         at System.RuntimeType.CreateInstanceOfT()
+         at System.Activator.CreateInstance[T]()
+         at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+         at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+         at System.Lazy`1.ExecutionAndPublication(LazyHelper executionAndPublication, Boolean useDefaultConstructor)
+         at System.Lazy`1.CreateValue()
+         at Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd[TArg](String name, Func`3 createOptions, TArg factoryArgument)
+         at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.InitializeAsync(AuthenticationScheme scheme, HttpContext context)
+         at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.GetHandlerAsync(HttpContext context, String authenticationScheme)
+         at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+         at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+         at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+         at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+         at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+info: Microsoft.Hosting.Lifetime[0]
+      Application is shutting down...
+Building...
+/root/FoodRecipeApi/DTOs/AuthDtos.cs(11,23): warning CS8618: Non-nullable property 'Token' must contain a non-null value when exiting constructor. Consider declaring the property as nullable. [/root/FoodRecipeApi/FoodRecipeApi.csproj]
+/root/FoodRecipeApi/DTOs/AuthDtos.cs(5,23): warning CS8618: Non-nullable property 'Email' must contain a non-null value when exiting constructor. Consider declaring the property as nullable. [/root/FoodRecipeApi/FoodRecipeApi.csproj]
+/root/FoodRecipeApi/DTOs/AuthDtos.cs(6,23): warning CS8618: Non-nullable property 'Password' must contain a non-null value when exiting constructor. Consider declaring the property as nullable. [/root/FoodRecipeApi/FoodRecipeApi.csproj]
+/root/FoodRecipeApi/Controllers/AuthController.cs(47,51): warning CS8601: Possible null reference assignment. [/root/FoodRecipeApi/FoodRecipeApi.csproj]
+/root/FoodRecipeApi/Controllers/AuthController.cs(74,51): warning CS8601: Possible null reference assignment. [/root/FoodRecipeApi/FoodRecipeApi.csproj]
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://0.0.0.0:5000
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Development
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: /root/FoodRecipeApi
+warn: Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware[3]
+      Failed to determine the https port for redirect.
+warn: Microsoft.EntityFrameworkCore.Query[10102]
+      The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (128ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      LIMIT @__p_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (10ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (6ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (6ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+      WHERE r.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (17ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+      WHERE r.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (15ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (16ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      LIMIT @__p_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (6ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (13ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+      WHERE r.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (10ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (15ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      LIMIT @__p_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (9ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+      WHERE r.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+      WHERE r.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (15ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+      WHERE r.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (67ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      LIMIT @__p_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (22ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (6ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      LIMIT @__p_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (13ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (39ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (7ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+      WHERE r.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (13ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      LIMIT @__p_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (71ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+      WHERE r.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (51ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (5ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+      WHERE r.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (7ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      LIMIT @__p_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (18ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      LIMIT @__p_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (8ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+      WHERE r.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (32ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (16ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (7ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (6ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (23ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (7ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+      WHERE r.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (6ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (12ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (6ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (13ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (32ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (19ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (24ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (8ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (5ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (12ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (6ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (7ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+      WHERE r.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (8ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (5ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (9ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (7ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (8ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (5ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      LIMIT @__p_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      LIMIT @__p_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (27ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      LIMIT @__p_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+      WHERE r.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (10ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (5ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (7ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (5ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (6ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+      WHERE r.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      LIMIT @__p_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (6ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (9ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      LIMIT @__p_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (7ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      LIMIT @__p_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (6ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      LIMIT @__p_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+      WHERE r.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (14ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (8ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      LIMIT @__p_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (5ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+      WHERE r.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      LIMIT @__p_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (12ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+      Start processing HTTP request POST https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyA0uA3X_E6DULa-vliSEWxverLSk-yO1ow
+info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+      Sending HTTP request POST https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyA0uA3X_E6DULa-vliSEWxverLSk-yO1ow
+info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+      Received HTTP response headers after 358.1045ms - 400
+info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+      End processing HTTP request after 389.7409ms - 400
+info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+      Start processing HTTP request POST https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyA0uA3X_E6DULa-vliSEWxverLSk-yO1ow
+info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+      Sending HTTP request POST https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyA0uA3X_E6DULa-vliSEWxverLSk-yO1ow
+info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+      Received HTTP response headers after 210.1731ms - 400
+info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+      End processing HTTP request after 210.4469ms - 400
+info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+      Start processing HTTP request POST https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyA0uA3X_E6DULa-vliSEWxverLSk-yO1ow
+info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+      Sending HTTP request POST https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyA0uA3X_E6DULa-vliSEWxverLSk-yO1ow
+info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+      Received HTTP response headers after 257.135ms - 200
+info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+      End processing HTTP request after 257.7006ms - 200
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (7ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      LIMIT @__p_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (7ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      LIMIT @__p_0
+info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+      Start processing HTTP request POST https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyA0uA3X_E6DULa-vliSEWxverLSk-yO1ow
+info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+      Sending HTTP request POST https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyA0uA3X_E6DULa-vliSEWxverLSk-yO1ow
+info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+      Received HTTP response headers after 298.774ms - 200
+info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+      End processing HTTP request after 299.4109ms - 200
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (11ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (28ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+      Start processing HTTP request POST https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyA0uA3X_E6DULa-vliSEWxverLSk-yO1ow
+info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+      Sending HTTP request POST https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyA0uA3X_E6DULa-vliSEWxverLSk-yO1ow
+info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+      Received HTTP response headers after 182.3454ms - 200
+info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+      End processing HTTP request after 182.8838ms - 200
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (6ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+      WHERE r.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (6ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (8ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (9ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (11ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (12ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+      WHERE r.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (6ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (7ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (7ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (9ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (8ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+      WHERE r.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (10ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (8ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      LIMIT @__p_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (5ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+      WHERE r.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      LIMIT @__p_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      LIMIT @__p_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+      WHERE r.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (13ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (43ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (33ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (8ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (5ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (5ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      LIMIT @__p_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      LIMIT @__p_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (9ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (8ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+      WHERE r.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (6ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (6ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+      WHERE r.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (28ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (30ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      LIMIT @__p_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (11ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+      WHERE r.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (5ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+      Start processing HTTP request POST https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyA0uA3X_E6DULa-vliSEWxverLSk-yO1ow
+info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+      Sending HTTP request POST https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyA0uA3X_E6DULa-vliSEWxverLSk-yO1ow
+info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+      Received HTTP response headers after 321.6423ms - 200
+info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+      End processing HTTP request after 322.3198ms - 200
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (6ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+      WHERE r.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (7ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (7ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (10ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (9ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (12ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+      WHERE r.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+      WHERE r.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (8ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (5ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+      WHERE r.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (16ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+      WHERE r.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (6ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (6ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+      WHERE r.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (5ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (6ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+      Start processing HTTP request POST https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyA0uA3X_E6DULa-vliSEWxverLSk-yO1ow
+info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+      Sending HTTP request POST https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyA0uA3X_E6DULa-vliSEWxverLSk-yO1ow
+info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+      Received HTTP response headers after 579.8421ms - 200
+info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+      End processing HTTP request after 581.6744ms - 200
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+      WHERE r.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (6ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      LIMIT @__p_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      LIMIT @__p_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+      WHERE r.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+      Start processing HTTP request POST https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyA0uA3X_E6DULa-vliSEWxverLSk-yO1ow
+info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+      Sending HTTP request POST https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyA0uA3X_E6DULa-vliSEWxverLSk-yO1ow
+info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+      Received HTTP response headers after 196.138ms - 200
+info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+      End processing HTTP request after 196.5375ms - 200
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+      WHERE r.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+      WHERE r.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+      WHERE r.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (38ms) [Parameters=[@p10='?' (DbType = Int64), @p0='?' (DbType = Int32), @p1='?' (DbType = Double), @p2='?', @p3='?' (DbType = Int32), @p4='?' (DbType = Double), @p5='?', @p6='?', @p7='?' (DbType = Int32), @p8='?' (DbType = Int32), @p9='?' (DbType = Double)], CommandType='Text', CommandTimeout='30']
+      UPDATE recipes_en SET calories = @p0, carbohydrates = @p1, description = @p2, difficulty = @p3, fats = @p4, ingredients = @p5, name = @p6, portion_size = @p7, preparation_time = @p8, protein = @p9
+      WHERE id = @p10;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+      WHERE r.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+      WHERE r.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (6ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+      WHERE r.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (17ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (5ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (8ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+      WHERE r.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (16ms) [Parameters=[@p10='?' (DbType = Int64), @p0='?' (DbType = Int32), @p1='?' (DbType = Double), @p2='?', @p3='?' (DbType = Int32), @p4='?' (DbType = Double), @p5='?', @p6='?', @p7='?' (DbType = Int32), @p8='?' (DbType = Int32), @p9='?' (DbType = Double)], CommandType='Text', CommandTimeout='30']
+      UPDATE recipes_en SET calories = @p0, carbohydrates = @p1, description = @p2, difficulty = @p3, fats = @p4, ingredients = @p5, name = @p6, portion_size = @p7, preparation_time = @p8, protein = @p9
+      WHERE id = @p10;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (5ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+      WHERE r.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (6ms) [Parameters=[@p10='?' (DbType = Int64), @p0='?' (DbType = Int32), @p1='?' (DbType = Double), @p2='?', @p3='?' (DbType = Int32), @p4='?' (DbType = Double), @p5='?', @p6='?', @p7='?' (DbType = Int32), @p8='?' (DbType = Int32), @p9='?' (DbType = Double)], CommandType='Text', CommandTimeout='30']
+      UPDATE recipes_en SET calories = @p0, carbohydrates = @p1, description = @p2, difficulty = @p3, fats = @p4, ingredients = @p5, name = @p6, portion_size = @p7, preparation_time = @p8, protein = @p9
+      WHERE id = @p10;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+      WHERE r.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (20ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (13ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (14ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (8ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      LIMIT @__p_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (6ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+      WHERE r.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+      Start processing HTTP request POST https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyA0uA3X_E6DULa-vliSEWxverLSk-yO1ow
+info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+      Sending HTTP request POST https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyA0uA3X_E6DULa-vliSEWxverLSk-yO1ow
+info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+      Received HTTP response headers after 192.4538ms - 200
+info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+      End processing HTTP request after 193.0518ms - 200
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      LIMIT @__p_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (5ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      LIMIT @__p_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      LIMIT @__p_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+      WHERE r.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+      WHERE r.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      LIMIT @__p_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (14ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+      WHERE r.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (6ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (5ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (6ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (5ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+      WHERE r.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+      WHERE r.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (5ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (8ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (8ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+      WHERE r.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (7ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (5ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (11ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (9ms) [Parameters=[@p10='?' (DbType = Int64), @p0='?' (DbType = Int32), @p1='?' (DbType = Double), @p2='?', @p3='?' (DbType = Int32), @p4='?' (DbType = Double), @p5='?', @p6='?', @p7='?' (DbType = Int32), @p8='?' (DbType = Int32), @p9='?' (DbType = Double)], CommandType='Text', CommandTimeout='30']
+      UPDATE recipes_en SET calories = @p0, carbohydrates = @p1, description = @p2, difficulty = @p3, fats = @p4, ingredients = @p5, name = @p6, portion_size = @p7, preparation_time = @p8, protein = @p9
+      WHERE id = @p10;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+      WHERE r.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      LIMIT @__p_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+      Start processing HTTP request POST https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyA0uA3X_E6DULa-vliSEWxverLSk-yO1ow
+info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+      Sending HTTP request POST https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyA0uA3X_E6DULa-vliSEWxverLSk-yO1ow
+info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+      Received HTTP response headers after 228.3726ms - 200
+info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+      End processing HTTP request after 228.9003ms - 200
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (12ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (11ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      LIMIT @__p_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+      Start processing HTTP request POST https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyA0uA3X_E6DULa-vliSEWxverLSk-yO1ow
+info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+      Sending HTTP request POST https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyA0uA3X_E6DULa-vliSEWxverLSk-yO1ow
+info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+      Received HTTP response headers after 415.7376ms - 200
+info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+      End processing HTTP request after 416.3326ms - 200
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+      WHERE r.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (6ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (6ms) [Parameters=[@p10='?' (DbType = Int64), @p0='?' (DbType = Int32), @p1='?' (DbType = Double), @p2='?', @p3='?' (DbType = Int32), @p4='?' (DbType = Double), @p5='?', @p6='?', @p7='?' (DbType = Int32), @p8='?' (DbType = Int32), @p9='?' (DbType = Double)], CommandType='Text', CommandTimeout='30']
+      UPDATE recipes_en SET calories = @p0, carbohydrates = @p1, description = @p2, difficulty = @p3, fats = @p4, ingredients = @p5, name = @p6, portion_size = @p7, preparation_time = @p8, protein = @p9
+      WHERE id = @p10;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+      WHERE r.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      LIMIT @__p_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+      WHERE r.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (16ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
+      WHERE r.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (6ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (6ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+      SELECT w.id, w.calories, w.carbohydrates, w.fats, w.name, w.protein
+      FROM wholefood_en AS w
+      WHERE w.id = @__p_0
+      LIMIT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.calories, r.carbohydrates, r.description, r.difficulty, r.fats, r.ingredients, r.name, r.portion_size, r.preparation_time, r.protein
+      FROM recipes_en AS r
