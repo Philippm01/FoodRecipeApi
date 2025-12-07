@@ -3,6 +3,16 @@ using FoodRecipeApi.Data;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
+// Enable CORS to allow requests from Angular app
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAngularApp",
+        policy => policy
+            .AllowAnyOrigin()
+            .AllowAnyMethod()
+            .AllowAnyHeader()
+    );
+});
 builder.Services.AddHttpClient();
 
 builder.Services.AddEndpointsApiExplorer();
@@ -56,10 +66,14 @@ builder.Services.AddSwaggerGen(c =>
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
+
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+// Use CORS policy
+app.UseCors("AllowAngularApp");
 
 app.UseHttpsRedirection();
 

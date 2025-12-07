@@ -19,7 +19,7 @@ namespace FoodRecipeApi.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<WholefoodEnDto>>> GetAll()
         {
-            return await _context.WholefoodEn.ToListAsync();
+            return await _context.WholefoodEn.Take(500).ToListAsync();
         }
 
         [HttpGet("{id}")]
